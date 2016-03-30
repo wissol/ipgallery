@@ -1,2 +1,2 @@
 # ipgallery
-A simple lightbox
+A gallery page

@@ -1,0 +1,173 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/* baseline styles */
+
+body {
+	font-family: 'Open Sans', sans-serif; 
+	position:relative;
+}
+
+h1, p, figcaption { text-align: center;}
+
+h1 {margin-top: 0;}
+
+form {
+	border:white;
+	padding:1vh 1vw;
+}
+
+input[type=search] {
+	margin: auto;
+	font-size: 16px;
+	border: solid thin #C0C0C0;
+	border-radius: 10%;
+	display:block;
+	width: 90vw; /* To be applied when device width < 460px */
+}
+
+#gallery {margin: 5vh auto;}
+
+footer {
+	margin: 5vh 0;
+}
+
+/* lightbox classes */
+ figure.lightbox {
+   	margin: 0;
+    position:fixed;
+    left:0;
+    top:0;
+    background-color: rgba(50,50,50,0.9);
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 5vh;
+    z-index: 98;
+
+  }
+
+  iframe {
+    margin: auto;
+  }
+
+  #lbimage {
+    margin: auto;
+    padding: 0 0 1em 0;
+    width: 100%;
+    max-width: 1100px;
+    float: none;
+    display: block;
+    opacity: 1.00;
+    cursor: pointer;
+    z-index: 99;
+  }
+
+  #lbvideo {
+    margin: 12vh auto;
+    float: none;
+    display: block;
+    opacity: 1.00;
+    cursor: pointer;
+    z-index: 99;
+  }
+
+  figcaption {
+  	width: 95%;
+    max-width: 600px;
+    color: white;
+    margin: auto;
+    padding: 1vh 0;
+  }
+
+  .no_scroll_bar{
+  	overflow: hidden; /* To be switched on off with js */
+  }
+
+  .arrow {
+  	position:fixed;    
+    top:50%;
+    z-index: 100;
+    width: 80px;
+    margin: 0;
+    padding: 0;
+  }
+
+  #rarrow {
+  	right: 3%;
+  }
+
+  #larrow {
+  	left: 3%;
+  }
+
+  .invisible {
+  	display: none;
+  }
+
+  
+/* Small devices */
+
+img {padding: 0 0 5% 0;}
+
+#gallery {width:200px;}
+
+/* Search Box = 460px as soon as there is enough space */
+
+@media (min-width:460px){
+#search {width: 460px;}
+}
+
+/* Two images 200 * 2 + 20= 420 */
+
+@media (min-width: 425px) and (max-width: 659px) {
+	#gallery {width:425px;}
+	img {padding: 0 20px 20px 0; margin: auto;}
+	img:nth-of-type(even) {padding: 0 0 20px;}
+}
+
+/* Three images */
+
+@media (min-width: 660px) and (max-width: 980px) {
+	#gallery {width:660px;}
+	img {padding: 0 20px 20px 0; margin: auto;}
+	img:nth-of-type(even) {padding: 0 20px 20px 0;}
+	img:nth-of-type(3n) {padding: 0 0 20px 0;}
+}
+
+@media (min-width: 980px) {
+
+#lbimage {
+	width: 90%;
+	margin-top: 10%;
+}
+
+#gallery {
+	width: 980px;
+}
+
+img {
+	float: left;
+	padding-right: 60px;
+	padding-bottom: 60px;
+}
+
+img:nth-of-type(4n) {
+	padding-right:0;
+}
+
+img:nth-of-type(n+8) {
+	padding-bottom: 0;
+	}
+
+.clearfix:after {
+	clear: both;
+	display: table;
+	content: "";
+}
+
+p {
+	margin: auto;
+}
+	
+}
+
+
