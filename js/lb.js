@@ -1,13 +1,13 @@
 /*jshint esversion: 6 */
 $(document).ready(function() {
   /* Constants */
-  const youtube_source_first_part = 'https://www.youtube.com/embed/';  
-  const rarrow = '<img id="rarrow" class="arrow" src="css/rarrow.svg">';
-  const larrow = '<img id="larrow" class="arrow" src="css/larrow.svg">';
-  const fig_begin = "<figure class='lightbox'>";
-  const fig_end = "</figure>";
-  const image_element = "<img id='lbitem' class='image' src='xxx'>";
-  const iframe_element = "<iframe id='lbitem' class='video' width='xxx' height='yyy' src='zzz' frameborder='0'></iframe>";
+  const YOUTUBE_SOURCE_FIRST_PART = 'https://www.youtube.com/embed/';  
+  const RARROW = '<img id="rarrow" class="arrow" src="css/rarrow.svg">';
+  const LARROW = '<img id="larrow" class="arrow" src="css/larrow.svg">';
+  const FIG_BEGIN = "<figure class='lightbox'>";
+  const FIG_END = "</figure>";
+  const IMAGE_ELEMENT = "<img id='lbitem' class='image' src='xxx'>";
+  const IFRAME_ELEMENT = "<iframe id='lbitem' class='video' width='xxx' height='yyy' src='zzz' frameborder='0'></iframe>";
 
   /* functions */ 
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
   	var new_item = '';
 
   	if (is_video_displayed) {
-  		src = src.replace(youtube_source_first_part,"img/thumbs/") + ".jpg";
+  		src = src.replace(YOUTUBE_SOURCE_FIRST_PART,"img/thumbs/") + ".jpg";
   	} else {
   		src = src.slice(0, 3) + "/thumbs" + src.slice(3);
   		
@@ -80,7 +80,7 @@ $(document).ready(function() {
   		new_caption = new_item.attr('alt');
 
   		$('figcaption').replaceWith("<figcaption>" + new_caption + "</figcaption>");
-  		finished_image_element = image_element.replace('xxx',new_src);
+  		finished_image_element = IMAGE_ELEMENT.replace('xxx',new_src);
   		$('#lbitem').replaceWith(finished_image_element);
 
   	} else {
@@ -102,7 +102,7 @@ $(document).ready(function() {
   	var finished_iframe_element;
 
   	new_src = new_item.attr('src').replace('img/thumbs/','').slice(0,-4);
-  	new_src = youtube_source_first_part + new_src;
+  	new_src = YOUTUBE_SOURCE_FIRST_PART + new_src;
   	new_caption = new_item.attr('alt'); 	
   	$('figcaption').replaceWith("<figcaption>" + new_caption + "</figcaption>");
 
@@ -116,7 +116,7 @@ $(document).ready(function() {
   		
   		dimensions = get_video_dimensions();  /* width, height */
 
-  		finished_iframe_element = iframe_element.replace('xxx', dimensions[0]).replace('yyy', dimensions[1]).replace('zzz', new_src);
+  		finished_iframe_element = IFRAME_ELEMENT.replace('xxx', dimensions[0]).replace('yyy', dimensions[1]).replace('zzz', new_src);
   		
     	$('#lbitem').replaceWith(finished_iframe_element);
   	}
@@ -127,23 +127,23 @@ $(document).ready(function() {
   	var src = $(thumbnail).attr('src').replace('thumbs/','');
   	var caption = $(thumbnail).attr('alt');
   	var fig_caption = '<figcaption>xxx</figcaption>';
-  	var finished_image_element = image_element.replace('xxx', src);
+  	var finished_image_element = IMAGE_ELEMENT.replace('xxx', src);
 
   	fig_caption = fig_caption.replace('xxx',caption);
 
   	$( $("body") )
-      .append( fig_begin + finished_image_element + fig_caption + fig_end)
-      .append( rarrow )
-      .append( larrow )
+      .append( FIG_BEGIN + finished_image_element + fig_caption + FIG_END)
+      .append( RARROW )
+      .append( LARROW )
       .prependTo( $("body") );
 
     $($("body")).addClass('no_scroll_bar');
   }
 
   function display_figure_and_video(thumbnail){
-  	var src = $(thumbnail).attr('src').replace('img/thumbs/',youtube_source_first_part).replace('.jpg','');
+  	var src = $(thumbnail).attr('src').replace('img/thumbs/',YOUTUBE_SOURCE_FIRST_PART).replace('.jpg','');
   	var caption = $(thumbnail).attr('alt');
-  	var finished_iframe_element = iframe_element;
+  	var finished_iframe_element = IFRAME_ELEMENT;
   	var fig_caption = '<figcaption>xxx</figcaption>';
   	var dimensions = get_video_dimensions();  /* width, height */
   	
@@ -151,9 +151,9 @@ $(document).ready(function() {
   	fig_caption = fig_caption.replace('xxx',caption);
 
   	$( $("body") )
-      .append( fig_begin + finished_iframe_element + fig_caption + fig_end)
-      .append( rarrow )
-      .append( larrow )
+      .append( FIG_BEGIN + finished_iframe_element + fig_caption + FIG_END)
+      .append( RARROW )
+      .append( LARROW )
       .prependTo( $("body") );
 
     $($("body")).addClass('no_scroll_bar');
