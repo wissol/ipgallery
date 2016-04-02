@@ -10,7 +10,10 @@ var $images_detached;
 		var $my_query = "";
 		$search_query += String.fromCharCode(event.which);
 		$my_query = $('img:not([alt*=' + $search_query +'])')
-		$images_detached = $($my_query, $my_query.parent()).detach();
+		$($my_query, $my_query.parent()).fadeOut(800, function(){
+			$images_detached = $($my_query, $my_query.parent()).detach();
+		});
+		
 	});
 
 });

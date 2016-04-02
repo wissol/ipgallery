@@ -49,7 +49,7 @@ footer {
     margin: auto;
   }
 
-  #lbimage {
+  .image {
     margin: auto;
     padding: 0 0 1em 0;
     width: 100%;
@@ -61,13 +61,14 @@ footer {
     z-index: 99;
   }
 
-  #lbvideo {
-    margin: 12vh auto;
+  .video {
+    margin: 6vh auto;
     float: none;
     display: block;
     opacity: 1.00;
     cursor: pointer;
     z-index: 99;
+    max-width: 1100px;
   }
 
   figcaption {
@@ -79,7 +80,7 @@ footer {
   }
 
   .no_scroll_bar{
-  	overflow: hidden; /* To be switched on off with js */
+  	overflow: hidden; /* To be switched on and off with js */
   }
 
   .arrow {
@@ -135,9 +136,9 @@ img {padding: 0 0 5% 0;}
 
 @media (min-width: 980px) {
 
-#lbimage {
+#lbitem {
 	width: 90%;
-	margin-top: 10%;
+	margin-top: 5%;
 }
 
 #gallery {
