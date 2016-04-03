@@ -194,6 +194,8 @@ $(document).ready(function() {
     close_lightbox();
   });
 
+  /* Keyboard */
+
 	$(document).keydown(function(e){
 		if (e.keyCode == 39) { /* right arrow */
 		   display_new_item(true);

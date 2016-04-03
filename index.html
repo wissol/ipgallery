@@ -9,19 +9,25 @@
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script><!--jquery-->
 <script src="js/lb.js"></script> <!-- my lightbox -->
 <script src="js/search.js" type="text/javascript"></script> <!-- search script -->
+<script src="js/jquery.leanModal.min.js" type="text/javascript"></script> <!-- Modal Plugin from http://leanmodal.finelysliced.com.au/-->
+<script type="text/javascript">
+			$(function() {
+    			$('a[class*=leanModal]').leanModal({ top : 200, closeButton: ".modal_close" });		
+			});
+		</script>
+
 <!-- end scripts -->
 
 <link rel="stylesheet" type="text/css" href="css/normalize-min.css" media="screen" />
-<!-- <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" /> Final css -->
-<link rel="stylesheet" type="text/css" href="css/dev.css" media="screen" />  <!-- development css -->
+<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
 
-<title>A life in photos</title>
+<title>A life in photos</a></title>
 </head>
 
 <body>
   
 <header>
-<h1>A life in photos</h1>
+<h1>A life in photos<a id="infolink" class="leanModal" href="#instructions"><span id="infoicon"></span></a></h1>
 </header>
 
 <main>
@@ -32,30 +38,33 @@
 
 <div id="gallery" class="clearfix list">
 <img src="img/thumbs/01.jpg" alt="I love hay bales. Took this snap on a drive through the countryside past some straw fields.
-">
+" title="Hay Bales">
 <img src="img/thumbs/02.jpg" alt="The lake was so calm today. We had a great view of the snow on the mountains from here.
-">
-<img src="img/thumbs/03.jpg" alt="canyon I hiked to the top of the mountain and got this picture of the canyon and trees below.">
-<img src="img/thumbs/04.jpg" alt="It was amazing to see an iceberg up close, it was so cold but didn’t snow today.">
-<img src="img/thumbs/05.jpg" alt="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
-<img src="img/thumbs/06.jpg" alt="Fall is coming, I love when the leaves on the trees start to change color.">
-<img src="img/thumbs/07.jpg" alt="I drove past this plantation yesterday, everything is so green!">
-<img src="img/thumbs/08.jpg" alt="My summer vacation to the Oregon Coast. I love the sandy dunes!">
-<img src="img/thumbs/09.jpg" alt="We enjoyed a quiet stroll down this countryside lane.">
-<img src="img/thumbs/10.jpg" alt="Sunset at the coast! The sky turned a lovely shade of orange.
-">
-<img src="img/thumbs/11.jpg" alt="I did a tour of a cave today and the view of the landscape below was breathtaking.">
-<img src="img/thumbs/12.jpg" alt="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
+" title="Lake">
+<img src="img/thumbs/03.jpg" alt="I hiked to the top of the mountain and got this picture of the canyon and trees below." title="Canyon">
+<img src="img/thumbs/04.jpg" alt="It was amazing to see an iceberg up close, it was so cold but didn’t snow today." title="Iceberg">
+<img src="img/thumbs/05.jpg" alt="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons." title="Desert">
+<img src="img/thumbs/06.jpg" alt="Fall is coming, I love when the leaves on the trees start to change color." title="Fall">
+<img src="img/thumbs/07.jpg" alt="I drove past this plantation yesterday, everything is so green!" title="Plantation">
+<img src="img/thumbs/08.jpg" alt="My summer vacation to the Oregon Coast. I love the sandy dunes!" title="Dunes">
+<img src="img/thumbs/09.jpg" alt="We enjoyed a quiet stroll down this countryside lane." title="Countryside Lane">
+<img src="img/thumbs/10.jpg" alt="Sunset at the coast! The sky turned a lovely shade of orange." title="Sunset">
+<img src="img/thumbs/11.jpg" alt="I did a tour of a cave today and the view of the landscape below was breathtaking." title="Cave">
+<img src="img/thumbs/12.jpg" alt="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in." title="Bluebells">
 </div> <!-- gallery -->
 
 </main>
 
 <footer>
   
-<p>&copy; This is a drill</p>
+<p><a href="now_with_videos.html">With YouTube Videos Too!</a></p>
 
 </footer>
 
+<div id="instructions">
+	<p>Type on search box to search, <kbd>Enter</kbd> to clear search.</p>
+	<p>Once lightbox is displayed use arrow keys to navigate, <kbd>x</kbd> and <kbd>esc</kbd> to close.</p>
+</div>
 
 </body>
 </html>
