@@ -24,7 +24,7 @@ var my_key= "";
 		console.log($search_query);
 		$my_query = $('img:not([alt*=' + $search_query +'],[title*=' + $search_query +'])');
 		$($my_query, $my_query.parent()).fadeOut(800, function(){
-			$images_detached = $($my_query, $my_query.parent()).detach();
+			$images_detached = $($my_query, $my_query.parent()).hide();
 		});
 		
 	});
