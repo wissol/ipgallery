@@ -10,7 +10,9 @@ var $images_detached;
 		var $my_query = "";
 		
 		if(event.keyCode == 8){
+			console.log("$search_query");
 			$search_query = $search_query.slice(0,-1);
+			console.log($search_query);
 		} else {
 			$search_query += String.fromCharCode(event.which);
 		}
