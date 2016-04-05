@@ -12,8 +12,10 @@ var my_key= "";
 		console.log(event.which);
 		
 		if(event.which == 8){
-			$search_query = $search_query.slice(0,-1);
-			console.log("$search_query", $search_query);
+			if ($search_query != ""){
+				$search_query = $search_query.slice(0,-1);
+				console.log("$search_query", $search_query);
+			}
 		} else {
 			my_key = String.fromCharCode(event.which).toLowerCase();
 			console.log('myk',my_key);
