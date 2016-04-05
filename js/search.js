@@ -25,7 +25,7 @@ var my_key= "";
 		if ($search_query != ""){
 			$images_detached = $('img').detach();
 			$my_query = $('[alt*=' + $search_query +'],[title*=' + $search_query +']');
-			$images_detached.appendTo("body");
+			$images_detached.appendTo("#gallery");
 	
 		} else {
 			$('img').show();
