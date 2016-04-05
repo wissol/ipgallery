@@ -11,9 +11,8 @@ var $images_detached;
 		console.log(event.which);
 		
 		if(event.which == 8){
-			console.log("$search_query");
 			$search_query = $search_query.slice(0,-1);
-			console.log($search_query);
+			console.log("$search_query", $search_query);
 		} else {
 			$search_query += String.fromCharCode(event.which);
 		}
