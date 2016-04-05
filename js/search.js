@@ -8,7 +8,7 @@ var $images_detached;
 		
 	$('#search').keypress(function(event){
 		var $my_query = "";
-		console.log('char code',fromCharCode(event.which));
+		console.log('char code'.fromCharCode(event.which));
 		$search_query += String.fromCharCode(event.which);
 		console.log($search_query);
 		$my_query = $('img:not([alt*=' + $search_query +'],[title*=' + $search_query +'])');
