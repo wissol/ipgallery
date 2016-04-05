@@ -16,6 +16,7 @@ var my_key= "";
 			console.log("$search_query", $search_query);
 		} else {
 			my_key = String.fromCharCode(event.which);
+			console.log('myk',my_key);
 			$search_query += my_key;
 		}
 		console.log($search_query);
