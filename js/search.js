@@ -1,6 +1,7 @@
 $(document).ready(function() {
 var $search_query = "";
 var $images_detached;
+var my_key= "";
 
 	$('#search').focus(function(){		
 		$search_query = "";
@@ -14,7 +15,8 @@ var $images_detached;
 			$search_query = $search_query.slice(0,-1);
 			console.log("$search_query", $search_query);
 		} else {
-			$search_query += String.fromCharCode(event.which);
+			my_key = String.fromCharCode(event.which);
+			$search_query += my_key;
 		}
 		console.log($search_query);
 		$my_query = $('img:not([alt*=' + $search_query +'],[title*=' + $search_query +'])');
