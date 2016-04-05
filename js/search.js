@@ -8,8 +8,12 @@ var $images_detached;
 		
 	$('#search').keypress(function(event){
 		var $my_query = "";
-		console.log('char code'.fromCharCode(event.which));
-		$search_query += String.fromCharCode(event.which);
+		
+		if(event.keyCode == 8){
+			$search_query = $search_query.slice(0,-1);
+		} else {
+			$search_query += String.fromCharCode(event.which);
+		}
 		console.log($search_query);
 		$my_query = $('img:not([alt*=' + $search_query +'],[title*=' + $search_query +'])');
 		$($my_query, $my_query.parent()).fadeOut(800, function(){
