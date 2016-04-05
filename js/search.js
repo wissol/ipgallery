@@ -8,7 +8,7 @@ var $images_detached;
 		
 	$('#search').keypress(function(event){
 		var $my_query = "";
-		console.log(event.which.keyCode);
+		console.log(event.keyCode);
 		
 		if(event.which.keyCode == 8){
 			console.log("$search_query");
