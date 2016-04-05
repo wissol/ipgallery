@@ -23,7 +23,7 @@ var my_key= "";
 		}
 		console.log($search_query);
 		$('img').hide();
-		$my_query = $('img([alt*=' + $search_query +'],[title*=' + $search_query +'])');
+		$my_query = $('[alt*=' + $search_query +'],[title*=' + $search_query +']');
 		$($my_query, $my_query.parent()).fadeIn(800, function(){
 			$images_detached = $($my_query, $my_query.parent()).show();
 		});
