@@ -15,7 +15,7 @@ var my_key= "";
 			$search_query = $search_query.slice(0,-1);
 			console.log("$search_query", $search_query);
 		} else {
-			my_key = String.fromCharCode(event.which);
+			my_key = String.fromCharCode(event.which).toLowerCase();
 			console.log('myk',my_key);
 			$search_query += my_key;
 		}
