@@ -6,7 +6,7 @@ var $images_detached;
 		$search_query = "";
 	});
 		
-	$('#search').keypress(function(event){
+	$('#search').keydown(function(event){
 		var $my_query = "";
 		console.log(event.which);
 		
