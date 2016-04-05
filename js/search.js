@@ -24,6 +24,7 @@ var my_key= "";
 		console.log($search_query);
 		if ($search_query != ""){
 			$images_detached = $('img').detach();
+			console.log($images_detached);
 			$my_query = $('[alt*=' + $search_query +'],[title*=' + $search_query +']');
 			$images_detached.appendTo("#gallery");
 	
