@@ -27,7 +27,16 @@ input[type=search] {
 	width: 90vw; /* To be applied when device width < 460px */
 }
 
-#gallery {margin: 5vh auto;}
+#gallery {
+  margin: 5vh auto; 
+  display:flex; 
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+  width: 320px;
+  height: 3000px;}
+
 
 footer {
 	margin: 5vh 0;
@@ -125,7 +134,7 @@ kbd {
   	left: 3%;
   }
 
-  .invisible {
+  .not_found {
   	display: none;
   }
 
@@ -155,12 +164,13 @@ kbd {
     box-shadow: 0px 0px 4px rgba(0,0,0,0.7);        
 }
 
+
   
 /* Small devices */
 
-img {padding: 0 0 5% 0;}
 
-#gallery {width:200px;}
+
+
 
 /* Search Box = 460px as soon as there is enough space */
 
@@ -172,7 +182,7 @@ img {padding: 0 0 5% 0;}
   margin: auto;
   background-image: url('info.png');
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;  
 }
 
 }
@@ -181,24 +191,27 @@ img {padding: 0 0 5% 0;}
 #search {width: 460px;}
 }
 
-/* Two images 200 * 2 + 20= 420 */
+/* Two images 200 * 2 + 20= 420 + 60 =  480*/
 
-@media (min-width: 425px) and (max-width: 659px) {
-	#gallery {width:425px;}
-	img {padding: 0 20px 20px 0; margin: auto;}
-	img:nth-of-type(even) {padding: 0 0 20px;}
+@media (min-width: 480px) and (max-width: 749px) {
+	#gallery {
+    width:480px;
+    height: 1440px;
+    justify-content: space-around;}
+
+
 }
 
 /* Three images */
 
-@media (min-width: 660px) and (max-width: 980px) {
-	#gallery {width:660px;}
-	img {padding: 0 20px 20px 0; margin: auto;}
-	img:nth-of-type(even) {padding: 0 20px 20px 0;}
-	img:nth-of-type(3n) {padding: 0 0 20px 0;}
+@media (min-width: 750px) and (max-width: 1030px) {
+	#gallery {width:720px;
+            height: 980px;
+            justify-content: space-between;}
+
 }
 
-@media (min-width: 980px) {
+@media (min-width: 1031px) {
 
 #lbitem {
 	width: 90%;
@@ -207,27 +220,10 @@ img {padding: 0 0 5% 0;}
 
 #gallery {
 	width: 980px;
+  height: 720px;
+  justify-content: space-between;
 }
 
-img {
-	float: left;
-	padding-right: 60px;
-	padding-bottom: 60px;
-}
-
-img:nth-of-type(4n) {
-	padding-right:0;
-}
-
-img:nth-of-type(n+8) {
-	padding-bottom: 0;
-	}
-
-.clearfix:after {
-	clear: both;
-	display: table;
-	content: "";
-}
 
 p {
 	margin: auto;
