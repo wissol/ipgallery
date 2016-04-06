@@ -162,7 +162,7 @@ $(document).ready(function() {
 
   /* Opens the lightbox, displays the img/video and caption */
 
-  $("img").click(function() {
+  $("img").click(function(event) {
     event.preventDefault();
     var is_video = $(this).hasClass('youtube');
 
